@@ -4,9 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mr.allroundster</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
 </head>
 <body>
     <h1 style="color: chocolate;">BIOLOGY</h1>
     <p  style="font-family: 'Courier New', Courier, monospace;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore odit nam labore veritatis ullam nulla doloribus tempora rerum sit temporibus dolore a voluptate, minus sed ipsum. Excepturi veritatis delectus expedita.</p>    
+    <div x-data="{
+        name: 'kemith'
+    }">
+        <input type="text" x-model="name">
+        <h2 x-text="name"></h2>
+    </div>
+    <div x-data="{
+        isHidden: false
+    }">
+        
+    <button x-on:click="isHidden=!isHidden">toggle</button>  
+    <p x-show="isHidden">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate consectetur iusto provident ea corrupti necessitatibus eius est nisi? Maiores consequuntur nemo voluptatibus, repellat nostrum voluptatum ipsa asperiores aliquid incidunt eos?</p>
+    </div>
+
+
+
+
+
+
+
+
 </body>
 </html>
